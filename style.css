@@ -298,7 +298,8 @@ footer {
   }
 
   .gallery-item {
-    height: 300px;
+    height: 250px;
+    width: 250px;
   }
 
   .gallery-prev,
@@ -322,9 +323,27 @@ footer {
     width: 100%;
     max-width: 200px;
   }
-
+  .gallery {
+    position: relative;
+    height: 250px; /* Altura fija para el contenedor */
+    width: 250px;
+  }
+  
+  .gallery-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
   .gallery-item {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .gallery-item img {
+    width: 250px;
     height: 250px;
   }
+
 }
 
