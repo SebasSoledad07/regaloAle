@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nuestro Amor</h1>
+            <p class="subtitle">Cada momento contigo es un tesoro</p>
+        </header>
+
+        <section class="counter-section">
+            <h2>Tiempo Juntos</h2>
+            <div class="counter">
+                <div class="time-unit">
+                    <span id="years">0</span>
+                    <p>Años</p>
+                </div>
+                <div class="time-unit">
+                    <span id="months">0</span>
+                    <p>Meses</p>
+                </div>
+                <div class="time-unit">
+                    <span id="days">0</span>
+                    <p>Días</p>
+                </div>
+                <div class="time-unit">
+                    <span id="hours">0</span>
+                    <p>Horas</p>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes">0</span>
+                    <p>Minutos</p>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds">0</span>
+                    <p>Segundos</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="anniversary-message" id="anniversary-message">
+            <!-- El mensaje de aniversario aparecerá aquí cuando sea un mesario -->
+        </section>
+
+        <section class="gallery-section">
+            <h2>Nuestros Momentos</h2>
+            <div class="gallery">
+                <div class="gallery-container">
+                    <div class="gallery-item fade">
+                        <img src="img/ChatGPT Image 3 abr 2025, 11_12_29.png" alt="Nosotros 1">
+                    </div>
+                    <div class="gallery-item fade">
+                        <img src="img/IMG-20240207-WA0021.jpg"Nosotros 2">
+                    </div>
+                    <div class="gallery-item fade">
+                        <img src="img/20230124144509255 (1).jpg" alt="Nosotros 3">
+                    </div>
+                    <div class="gallery-item fade">
+                        <img src="img/IMG_20221126_203352.jpg" alt="Nosotros 4">
+                    </div>
+                    <div class="gallery-item fade">
+                        <img src="img/IMG_20230101_002343_904.jpg" alt="Nosotros 5">
+                    </div>
+                </div>
+                <button class="gallery-prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="gallery-next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </section>
+
+        <section class="love-notes">
+            <h2>Te Amo Porque...</h2>
+            <div class="note">
+                <p>Iluminas cada uno de mis días con tu sonrisa</p>
+            </div>
+            <div class="note">
+                <p>Tu corazón es el más hermoso que he conocido</p>
+            </div>
+            <div class="note">
+                <p>Contigo, hasta los momentos simples se vuelven especiales</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Con todo mi amor, para ti ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>
+
+
+

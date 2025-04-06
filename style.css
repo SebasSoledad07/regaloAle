@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 40px 0;
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  color: #ff6b6b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Counter Styles */
+.counter-section {
+  text-align: center;
+}
+
+.counter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.time-unit {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  border-radius: 10px;
+  padding: 15px;
+  min-width: 100px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.time-unit:hover {
+  transform: translateY(-5px);
+}
+
+.time-unit span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  display: block;
+}
+
+.time-unit p {
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 5px;
+}
+
+/* Anniversary Message */
+.anniversary-message {
+  display: none;
+  text-align: center;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  animation: fadeIn 1s;
+}
+
+.anniversary-message h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.2rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.anniversary-message p {
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1.8;
+}
+
+/* Gallery Styles */
+.gallery-section {
+  position: relative;
+}
+
+.gallery {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  height: 600px; /* Altura fija para el contenedor */
+  width: 600px;
+}
+
+.gallery-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.gallery-item img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover; /* Mantiene la proporción y cubre el contenedor */
+  border-radius: 10px;
+}
+
+.gallery-prev,
+.gallery-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #ff6b6b;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.gallery-prev {
+  left: 15px;
+}
+
+.gallery-next {
+  right: 15px;
+}
+
+.dots-container {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #ff6b6b;
+}
+
+/* Fade animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Love Notes */
+.love-notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.note {
+  background-color: #fff9db;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transform: rotate(-1deg);
+  transition: transform 0.3s;
+}
+
+.note:nth-child(even) {
+  transform: rotate(1deg);
+  background-color: #f3f0ff;
+}
+
+.note:hover {
+  transform: scale(1.03) rotate(0);
+}
+
+.note p {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.3rem;
+  color: #555;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.2rem;
+  color: #ff6b6b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .counter {
+    gap: 10px;
+  }
+
+  .time-unit {
+    min-width: 80px;
+    padding: 10px;
+  }
+
+  .time-unit span {
+    font-size: 1.5rem;
+  }
+
+  .gallery-item {
+    height: 300px;
+  }
+
+  .gallery-prev,
+  .gallery-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .note p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .time-unit {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .gallery-item {
+    height: 250px;
+  }
+}
+
